@@ -1,0 +1,20 @@
+#summary RP1210 Wrapper for .NET Applications
+
+= Introduction =
+
+This wrapper is designed to allow easy access to the RP1210a & b API as installed by vendors of automotive and industrial network interface devices such the Dearborn Group, Nexiq, Vector, and Kvaser.
+
+
+= Details =
+
+The core of this library are the API functions:
+
+RP1210_ClientConnect - Establishes a logical client connection with the API DLL.
+RP1210_ClientDisconnect - Disconnects the logical client application from the API DLL.
+RP1210_SendCommand -Sends a command to the API DLL for things like filtering, etc.
+RP1210_SendMessage - Sends a message to the API DLL.
+RP1210_ReadMessage - Reads a message from the API DLL.
+RP1210_ReadVersion - Reads version information from the API, about the API.
+RP1210_ReadDetailedVersion - Newer more comprehensive version information command.  This command is now preferred over the RP1210_ReadVersion call.
+RP1210_GetErrorMsg - Translates an RP1210 error code into a textual description of the error.
+RP1210_GetHardwareStatus - Returns information state of the connection and data link.
