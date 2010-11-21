@@ -46,7 +46,7 @@ namespace rp1210
                             {
                                 currentRoot = strLine.Substring(1, strLine.Length - 2);
                             }
-                            else if (!strLine.StartsWith("#"))  //ignore comments
+                            else if (!strLine.StartsWith("#") & !strLine.StartsWith(";"))  //ignore comments
                             {
                                 keyPair = strLine.Split(new char[] { '=' }, 2);
 
