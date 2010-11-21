@@ -38,6 +38,8 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -48,6 +50,27 @@
     <Compile Include="iniParser.cs" />
     <Compile Include="rp1210.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="rp1210Control.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="rp1210Control.Designer.cs">
+      <DependentUpon>rp1210Control.cs</DependentUpon>
+    </Compile>
+    <Compile Include="rp1210Functions.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="rp1210Control.resx">
+      <DependentUpon>rp1210Control.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\zonar-dotnet\zonar-dotnet.csproj">
+      <Project>{EDC8C658-341A-4F07-B8A8-49EBFBAE3284}</Project>
+      <Name>zonar-dotnet</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\DataSources\DeviceInfo.datasource" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
